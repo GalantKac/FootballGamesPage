@@ -1,8 +1,9 @@
 ﻿using System;
+using Football.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace Football.Models
+namespace Football.Data
 {
     public partial class DB_Football_GamesContext : DbContext
     {
@@ -22,7 +23,6 @@ namespace Football.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=DB_Football_Games;Integrated Security=True");
             }
         }
